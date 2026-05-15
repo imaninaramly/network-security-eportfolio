@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nana's E-Portfolio | Security-Focused Software Developer</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body{
+      background: #f7f8fc;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .hero{
+      background: linear-gradient(135deg,#6a11cb,#2575fc);
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before{
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      top: -100px;
+      right: -80px;
+    }
+
+    .hero::after{
+      content: "";
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 50%;
+      bottom: -100px;
+      left: -80px;
+    }
+
+    .hero h1{
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .hero p{
+      font-size: 1.2rem;
+      margin-top: 15px;
+    }
+
+    .navbar{
+      background: white !important;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .nav-link{
+      color: #333 !important;
+      font-weight: 500;
+      margin: 0 10px;
+    }
+
+    .nav-link:hover{
+      color: #2575fc !important;
+    }
+
+    .section-title{
+      font-weight: 700;
+      color: #2575fc;
+      margin-bottom: 25px;
+      position: relative;
+    }
+
+    .section-title::after{
+      content: "";
+      width: 80px;
+      height: 4px;
+      background: #2575fc;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      border-radius: 10px;
+    }
+
+    .card{
+      border: none;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      transition: 0.3s ease;
+      background: white;
+    }
+
+    .card:hover{
+      transform: translateY(-5px);
+    }
+
+    .badge-skill{
+      background: #eef4ff;
+      color: #2575fc;
+      padding: 10px 16px;
+      border-radius: 30px;
+      margin: 6px;
+      display: inline-block;
+      font-weight: 500;
+    }
+
+    .timeline-table th{
+      background: #2575fc;
+      color: white;
+    }
+
+    .evidence-box{
+      text-align: center;
+    }
+
+    .evidence-box img{
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+
+    footer{
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 80px;
+    }
+
+    .cute-icon{
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .highlight{
+      color: #2575fc;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1>Nana's Career E-Portfolio 💻</h1>
+      <p>Aspiring Software Developer (Security-Focused)</p>
+    </div>
+  </section>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+        <div class="navbar-nav">
+          <a class="nav-link" href="#career">Career</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#plan">Plan</a>
+          <a class="nav-link" href="#evidence">Evidence</a>
+          <a class="nav-link" href="#reflection">Reflection</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-5">
+
+    <!-- CAREER EXPLORATION -->
+    <section id="career" class="mb-5">
+      <h2 class="section-title">A. Career Exploration</h2>
+
+      <div class="card">
+        <div class="cute-icon">🔐</div>
+
+        <h4>Chosen Career: Software Developer (Security-Focused)</h4>
+
+        <h5 class="mt-4">Job Responsibilities</h5>
+        <p>
+          A security-focused software developer is responsible for building secure web and mobile applications while ensuring user data is protected from cyber threats. 
+          The role includes writing clean and secure code, testing applications for vulnerabilities, fixing security weaknesses, and implementing authentication and encryption features.
+        </p>
+
+        <p>
+          The developer also works closely with cybersecurity teams to prevent attacks such as SQL Injection, Cross-Site Scripting (XSS), broken authentication, and API vulnerabilities.
+        </p>
+
+        <h5 class="mt-4">Required Skills</h5>
+        <ul>
+          <li>Programming languages such as PHP, JavaScript, Python, and Dart</li>
+          <li>Web and mobile development frameworks</li>
+          <li>Database management using MySQL or Firebase</li>
+          <li>Knowledge of cybersecurity principles and secure coding practices</li>
+          <li>Understanding of API security and authentication systems</li>
+          <li>Problem-solving and teamwork skills</li>
+        </ul>
+
+        <h5 class="mt-4">Relevance to Modern Cybersecurity</h5>
+        <p>
+          Modern organizations rely heavily on software applications and cloud systems. Because of this, attackers often target applications to steal sensitive information or disrupt services.
+        </p>
+
+        <p>
+          Security-focused software developers help reduce cyber risks by applying security measures during the development phase. This concept is known as 
+          <span class="highlight">“Shift Left Security”</span>, where security is integrated early in the software development lifecycle.
+        </p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="mb-5">
+      <h2 class="section-title">B. Personal Skills Assessment</h2>
+
+      <div class="card">
+
+        <h4>i. Current Skills</h4>
+
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <h5>Technical Skills</h5>
+
+            <span class="badge-skill">Laravel Fullstack</span>
+            <span class="badge-skill">Flutter Development</span>
+            <span class="badge-skill">Firebase Authentication</span>
+            <span class="badge-skill">PHP & MySQL</span>
+            <span class="badge-skill">HTML, CSS & Bootstrap</span>
+            <span class="badge-skill">Basic Networking</span>
+            <span class="badge-skill">GitHub & Git</span>
+          </div>
+
+          <div class="col-md-6">
+            <h5>Soft Skills</h5>
+
+            <span class="badge-skill">Communication</span>
+            <span class="badge-skill">Teamwork</span>
+            <span class="badge-skill">Problem Solving</span>
+            <span class="badge-skill">Fast Learner</span>
+            <span class="badge-skill">Adaptability</span>
+            <span class="badge-skill">Creativity</span>
+          </div>
+        </div>
+
+        <hr class="my-4">
+
+        <h4>ii. Comparison with Industry Requirements</h4>
+
+        <p>
+          I already have strong foundations in application development using Laravel and Flutter. I am comfortable building databases, authentication systems, and responsive interfaces.
+        </p>
+
+        <p>
+          However, compared to industry expectations for security-focused developers, I still need to improve in areas such as:
+        </p>
+
+        <ul>
+          <li>Penetration testing techniques</li>
+          <li>Secure API development</li>
+          <li>Cloud security</li>
+          <li>Linux system administration</li>
+          <li>Security monitoring tools</li>
+        </ul>
+
+        <p>
+          To become more competitive in the cybersecurity field, I plan to gain more hands-on experience with security tools and certifications.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- DEVELOPMENT PLAN -->
+    <section id="plan" class="mb-5">
+      <h2 class="section-title">C. Career Development Plan</h2>
+
+      <div class="card">
+
+        <h4>Certifications & Learning Goals</h4>
+
+        <ul>
+          <li>CompTIA Security+</li>
+          <li>AWS Certified Security Specialty</li>
+          <li>CCNA (Basic Networking Knowledge)</li>
+        </ul>
+
+        <h4 class="mt-4">Tools to Learn & Use</h4>
+
+        <ul>
+          <li>Wireshark</li>
+          <li>Linux</li>
+          <li>Python</li>
+          <li>Burp Suite</li>
+          <li>OWASP ZAP</li>
+          <li>Docker</li>
+        </ul>
+
+        <h4 class="mt-4">Career Timeline</h4>
+
+        <table class="table table-bordered timeline-table mt-3">
+          <thead>
+            <tr>
+              <th>Timeline</th>
+              <th>Goals</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>2 Years (Short-Term)</td>
+              <td>
+                Work as a Junior Software Developer while improving cybersecurity skills and obtaining CompTIA Security+ certification.
+              </td>
+            </tr>
+
+            <tr>
+              <td>5 Years (Long-Term)</td>
+              <td>
+                Become a Senior Security-Focused Software Engineer with strong experience in secure application development and cloud security.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </section>
+
+    <!-- EVIDENCE -->
+    <section id="evidence" class="mb-5">
+      <h2 class="section-title">D. Evidence of Learning</h2>
+
+      <div class="row">
+
+        <div class="col-md-4">
+          <div class="card evidence-box">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop" alt="Project">
+
+            <h5>eTani Mobile App</h5>
+
+            <p>
+              A mobile agriculture application developed using Flutter and Firebase Authentication.
+            </p>
+
+            <p><strong>Skills Used:</strong> Flutter, Firebase, UI Design</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card evidence-box">
+            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1200&auto=format&fit=crop" alt="System">
+
+            <h5>Water Quality Monitoring System</h5>
+
+            <p>
+              A Laravel-based monitoring system for water quality management.
+            </p>
+
+            <p><strong>Skills Used:</strong> Laravel, MySQL, Dashboard Design</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card evidence-box">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" alt="Workshop">
+
+            <h5>Workshops & Online Courses</h5>
+
+            <p>
+              Participated in cybersecurity webinars and online learning related to secure coding and networking basics.
+            </p>
+
+            <p><strong>Platform:</strong> Cisco Skills For All & YouTube Learning</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- REFLECTION -->
+    <section id="reflection" class="mb-5">
+      <h2 class="section-title">E. Personal Reflection</h2>
+
+      <div class="card">
+
+        <h4>Dream Company: 
+          :contentReference[oaicite:0]{index=0}
+        </h4>
+
+        <h5 class="mt-4">Why do you want to work for this company?</h5>
+
+        <p>
+          I want to work for CyberSecurity Malaysia because the company plays an important role in protecting Malaysia’s digital infrastructure and cybersecurity ecosystem. 
+          I admire the organization’s mission to strengthen national cybersecurity awareness and defense.
+        </p>
+
+        <h5 class="mt-4">What value can you bring to this company?</h5>
+
+        <p>
+          I can contribute by developing secure and user-friendly applications while applying secure coding practices. 
+          I am also willing to continuously learn new technologies and adapt quickly to industry changes.
+        </p>
+
+        <h5 class="mt-4">Why should we hire you?</h5>
+
+        <p>
+          I am hardworking, motivated, and eager to improve my cybersecurity knowledge. 
+          Besides technical abilities, I can work well in teams and communicate effectively during projects.
+        </p>
+
+        <h5 class="mt-4">What skills make you suitable for this job?</h5>
+
+        <ul>
+          <li>Web and mobile application development</li>
+          <li>Database and authentication systems</li>
+          <li>Problem-solving mindset</li>
+          <li>Fast adaptability to new technologies</li>
+        </ul>
+
+        <h5 class="mt-4">What are your strengths and weaknesses?</h5>
+
+        <p>
+          <strong>Strengths:</strong> Fast learner, creative thinker, and able to adapt quickly to new frameworks and tools.
+        </p>
+
+        <p>
+          <strong>Weaknesses:</strong> I am still improving my knowledge in advanced penetration testing and network forensics.
+        </p>
+
+        <h5 class="mt-4">Why would a company choose to hire you?</h5>
+
+        <p>
+          A company would choose to hire me because I am passionate about both software development and cybersecurity. 
+          I am committed to improving my skills and contributing positively to the organization.
+        </p>
+
+      </div>
+    </section>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Nana | UniSZA Student 💜</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
