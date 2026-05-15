@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nana's E-Portfolio | Security-Focused Software Developer</title>
+  <title>ImaninaRamly's E-Portfolio</title>
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -12,146 +12,211 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
   <style>
+
     *{
       font-family: 'Poppins', sans-serif;
     }
 
     body{
-      background: #f7f8fc;
+      background: #fff7fb;
       color: #333;
+      overflow-x: hidden;
+    }
+
+    html{
       scroll-behavior: smooth;
     }
 
+    /* HERO */
+
     .hero{
-      background: linear-gradient(135deg,#6a11cb,#2575fc);
-      color: white;
-      padding: 100px 20px;
-      text-align: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg,#ffb6d9,#b9d9ff);
+      display: flex;
+      align-items: center;
       position: relative;
       overflow: hidden;
+      padding: 50px 0;
     }
 
-    .hero::before{
-      content: "";
+    .bubble{
       position: absolute;
-      width: 300px;
-      height: 300px;
-      background: rgba(255,255,255,0.1);
       border-radius: 50%;
-      top: -100px;
-      right: -80px;
+      background: rgba(255,255,255,0.3);
     }
 
-    .hero::after{
-      content: "";
-      position: absolute;
-      width: 250px;
-      height: 250px;
-      background: rgba(255,255,255,0.08);
-      border-radius: 50%;
-      bottom: -100px;
-      left: -80px;
+    .bubble1{
+      width: 200px;
+      height: 200px;
+      top: -50px;
+      right: -50px;
     }
 
-    .hero h1{
-      font-size: 3rem;
+    .bubble2{
+      width: 150px;
+      height: 150px;
+      bottom: 50px;
+      left: -50px;
+    }
+
+    .profile-img{
+      width: 320px;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 30px;
+      border: 8px solid white;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .hero-title{
+      font-size: 3.5rem;
       font-weight: 700;
+      color: #5a3d5c;
     }
 
-    .hero p{
+    .hero-subtitle{
       font-size: 1.2rem;
-      margin-top: 15px;
+      color: #5f5f5f;
+      margin-top: 20px;
+      line-height: 1.8;
     }
+
+    .cute-btn{
+      background: #ff73b3;
+      border: none;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 40px;
+      margin-top: 20px;
+      transition: 0.3s;
+      font-weight: 500;
+    }
+
+    .cute-btn:hover{
+      background: #ff4c9a;
+      transform: translateY(-3px);
+    }
+
+    /* NAVBAR */
 
     .navbar{
       background: white !important;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     }
 
     .nav-link{
-      color: #333 !important;
       font-weight: 500;
+      color: #555 !important;
       margin: 0 10px;
     }
 
     .nav-link:hover{
-      color: #2575fc !important;
+      color: #ff4c9a !important;
+    }
+
+    /* SECTION */
+
+    section{
+      padding: 90px 0;
     }
 
     .section-title{
+      font-size: 2.2rem;
       font-weight: 700;
-      color: #2575fc;
-      margin-bottom: 25px;
-      position: relative;
+      text-align: center;
+      color: #ff4c9a;
+      margin-bottom: 60px;
     }
 
-    .section-title::after{
-      content: "";
-      width: 80px;
-      height: 4px;
-      background: #2575fc;
-      position: absolute;
-      left: 0;
-      bottom: -10px;
-      border-radius: 10px;
-    }
-
-    .card{
-      border: none;
-      border-radius: 20px;
-      padding: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-      transition: 0.3s ease;
+    .card-box{
       background: white;
+      border-radius: 30px;
+      padding: 35px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      height: 100%;
+      transition: 0.3s;
     }
 
-    .card:hover{
+    .card-box:hover{
       transform: translateY(-5px);
     }
 
-    .badge-skill{
-      background: #eef4ff;
-      color: #2575fc;
-      padding: 10px 16px;
+    .icon-circle{
+      width: 70px;
+      height: 70px;
+      background: #ffe3f1;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      color: #ff4c9a;
+      margin-bottom: 20px;
+    }
+
+    .skill-badge{
+      background: #ffe8f4;
+      color: #ff4c9a;
+      padding: 10px 18px;
       border-radius: 30px;
-      margin: 6px;
       display: inline-block;
+      margin: 5px;
+      font-size: 14px;
       font-weight: 500;
     }
 
-    .timeline-table th{
-      background: #2575fc;
-      color: white;
+    .timeline{
+      border-left: 4px solid #ff9ac7;
+      padding-left: 30px;
     }
 
-    .evidence-box{
-      text-align: center;
+    .timeline-item{
+      margin-bottom: 35px;
+      position: relative;
     }
 
-    .evidence-box img{
+    .timeline-item::before{
+      content: "";
+      width: 18px;
+      height: 18px;
+      background: #ff4c9a;
+      border-radius: 50%;
+      position: absolute;
+      left: -40px;
+      top: 5px;
+    }
+
+    .evidence-img{
       width: 100%;
-      border-radius: 15px;
-      margin-bottom: 15px;
+      border-radius: 20px;
+      height: 220px;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .resume-box{
+      background: linear-gradient(135deg,#fff0f7,#f4f7ff);
+      border-radius: 30px;
+      padding: 40px;
     }
 
     footer{
-      background: #111827;
+      background: #ff4c9a;
       color: white;
       text-align: center;
       padding: 25px;
-      margin-top: 80px;
+      margin-top: 50px;
     }
 
-    .cute-icon{
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-
-    .highlight{
-      color: #2575fc;
+    .pink{
+      color: #ff4c9a;
       font-weight: 600;
     }
+
   </style>
 </head>
 
@@ -159,20 +224,52 @@
 
   <!-- HERO -->
   <section class="hero">
+
+    <div class="bubble bubble1"></div>
+    <div class="bubble bubble2"></div>
+
     <div class="container">
-      <h1>Nana's Career E-Portfolio 💻</h1>
-      <p>Aspiring Software Developer (Security-Focused)</p>
+      <div class="row align-items-center">
+
+        <div class="col-lg-6 text-center mb-5 mb-lg-0">
+
+          <!-- CHANGE YOUR IMAGE HERE -->
+          <img src="img1.jpeg" class="profile-img" alt="Profile Picture">
+
+        </div>
+
+        <div class="col-lg-6">
+
+          <h1 class="hero-title">
+            Hi, I'm Nur Imanina binti Ramly 💻✨
+          </h1>
+
+          <p class="hero-subtitle">
+            A passionate <span class="pink">Security-Focused Software Developer</span> 
+            who loves creating secure and user-friendly applications.
+            I enjoy learning cybersecurity, mobile development, and modern web technologies.
+          </p>
+
+          <a href="#career" class="btn cute-btn">
+            Explore My Portfolio
+          </a>
+
+        </div>
+
+      </div>
     </div>
   </section>
 
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
-      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+      <div class="collapse navbar-collapse justify-content-center" id="menu">
+
         <div class="navbar-nav">
           <a class="nav-link" href="#career">Career</a>
           <a class="nav-link" href="#skills">Skills</a>
@@ -180,284 +277,302 @@
           <a class="nav-link" href="#evidence">Evidence</a>
           <a class="nav-link" href="#reflection">Reflection</a>
         </div>
+
       </div>
     </div>
   </nav>
 
-  <div class="container py-5">
+  <!-- CAREER -->
+  <section id="career">
 
-    <!-- CAREER EXPLORATION -->
-    <section id="career" class="mb-5">
-      <h2 class="section-title">A. Career Exploration</h2>
+    <div class="container">
 
-      <div class="card">
-        <div class="cute-icon">🔐</div>
+      <h2 class="section-title">
+        Career Exploration 🔐
+      </h2>
 
-        <h4>Chosen Career: Software Developer (Security-Focused)</h4>
+      <div class="card-box">
 
-        <h5 class="mt-4">Job Responsibilities</h5>
-        <p>
-          A security-focused software developer is responsible for building secure web and mobile applications while ensuring user data is protected from cyber threats. 
-          The role includes writing clean and secure code, testing applications for vulnerabilities, fixing security weaknesses, and implementing authentication and encryption features.
+        <div class="icon-circle">
+          <i class="bi bi-shield-lock-fill"></i>
+        </div>
+
+        <h3>Software Developer (Security-Focused)</h3>
+
+        <p class="mt-4">
+          A security-focused software developer is responsible for building secure applications and protecting systems from cyber threats.
         </p>
 
         <p>
-          The developer also works closely with cybersecurity teams to prevent attacks such as SQL Injection, Cross-Site Scripting (XSS), broken authentication, and API vulnerabilities.
+          The role includes secure coding, testing vulnerabilities, protecting user data, and ensuring applications are safe from attacks such as SQL Injection and XSS.
         </p>
 
         <h5 class="mt-4">Required Skills</h5>
+
         <ul>
-          <li>Programming languages such as PHP, JavaScript, Python, and Dart</li>
-          <li>Web and mobile development frameworks</li>
-          <li>Database management using MySQL or Firebase</li>
-          <li>Knowledge of cybersecurity principles and secure coding practices</li>
-          <li>Understanding of API security and authentication systems</li>
-          <li>Problem-solving and teamwork skills</li>
+          <li>Programming Languages</li>
+          <li>Web & Mobile Development</li>
+          <li>Database Security</li>
+          <li>Secure API Development</li>
+          <li>Cybersecurity Knowledge</li>
         </ul>
 
         <h5 class="mt-4">Relevance to Modern Cybersecurity</h5>
-        <p>
-          Modern organizations rely heavily on software applications and cloud systems. Because of this, attackers often target applications to steal sensitive information or disrupt services.
-        </p>
 
         <p>
-          Security-focused software developers help reduce cyber risks by applying security measures during the development phase. This concept is known as 
-          <span class="highlight">“Shift Left Security”</span>, where security is integrated early in the software development lifecycle.
+          Today, cybercriminals target applications and online systems. Security-focused developers help reduce cyber risks by integrating security from the beginning of software development.
         </p>
+
       </div>
-    </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="mb-5">
-      <h2 class="section-title">B. Personal Skills Assessment</h2>
+    </div>
+  </section>
 
-      <div class="card">
+  <!-- SKILLS -->
+  <section id="skills">
 
-        <h4>i. Current Skills</h4>
+    <div class="container">
 
-        <div class="row mt-4">
-          <div class="col-md-6">
-            <h5>Technical Skills</h5>
+      <h2 class="section-title">
+        Personal Skills Assessment 🌸
+      </h2>
 
-            <span class="badge-skill">Laravel Fullstack</span>
-            <span class="badge-skill">Flutter Development</span>
-            <span class="badge-skill">Firebase Authentication</span>
-            <span class="badge-skill">PHP & MySQL</span>
-            <span class="badge-skill">HTML, CSS & Bootstrap</span>
-            <span class="badge-skill">Basic Networking</span>
-            <span class="badge-skill">GitHub & Git</span>
-          </div>
+      <div class="row g-4">
 
-          <div class="col-md-6">
-            <h5>Soft Skills</h5>
+        <div class="col-lg-6">
+          <div class="card-box">
 
-            <span class="badge-skill">Communication</span>
-            <span class="badge-skill">Teamwork</span>
-            <span class="badge-skill">Problem Solving</span>
-            <span class="badge-skill">Fast Learner</span>
-            <span class="badge-skill">Adaptability</span>
-            <span class="badge-skill">Creativity</span>
+            <div class="icon-circle">
+              <i class="bi bi-code-slash"></i>
+            </div>
+
+            <h4>Technical Skills</h4>
+
+            <div class="mt-4">
+              <span class="skill-badge">Laravel</span>
+              <span class="skill-badge">Flutter</span>
+              <span class="skill-badge">Firebase</span>
+              <span class="skill-badge">PHP & MySQL</span>
+              <span class="skill-badge">HTML/CSS</span>
+              <span class="skill-badge">Bootstrap</span>
+              <span class="skill-badge">GitHub</span>
+            </div>
+
           </div>
         </div>
 
-        <hr class="my-4">
+        <div class="col-lg-6">
+          <div class="card-box">
 
-        <h4>ii. Comparison with Industry Requirements</h4>
+            <div class="icon-circle">
+              <i class="bi bi-stars"></i>
+            </div>
 
-        <p>
-          I already have strong foundations in application development using Laravel and Flutter. I am comfortable building databases, authentication systems, and responsive interfaces.
-        </p>
+            <h4>Soft Skills</h4>
 
-        <p>
-          However, compared to industry expectations for security-focused developers, I still need to improve in areas such as:
-        </p>
+            <div class="mt-4">
+              <span class="skill-badge">Communication</span>
+              <span class="skill-badge">Teamwork</span>
+              <span class="skill-badge">Problem Solving</span>
+              <span class="skill-badge">Creativity</span>
+              <span class="skill-badge">Fast Learner</span>
+              <span class="skill-badge">Adaptability</span>
+            </div>
 
-        <ul>
-          <li>Penetration testing techniques</li>
-          <li>Secure API development</li>
-          <li>Cloud security</li>
-          <li>Linux system administration</li>
-          <li>Security monitoring tools</li>
-        </ul>
+          </div>
+        </div>
 
-        <p>
-          To become more competitive in the cybersecurity field, I plan to gain more hands-on experience with security tools and certifications.
+      </div>
+
+      <div class="card-box mt-4">
+
+        <h4>Comparison with Industry Requirements</h4>
+
+        <p class="mt-3">
+          I already have experience in building web and mobile applications using Laravel and Flutter. 
+          However, I still need to improve my skills in penetration testing, Linux administration, and secure API development to meet industry expectations.
         </p>
 
       </div>
-    </section>
 
-    <!-- DEVELOPMENT PLAN -->
-    <section id="plan" class="mb-5">
-      <h2 class="section-title">C. Career Development Plan</h2>
+    </div>
+  </section>
 
-      <div class="card">
+  <!-- PLAN -->
+  <section id="plan">
 
-        <h4>Certifications & Learning Goals</h4>
+    <div class="container">
 
-        <ul>
-          <li>CompTIA Security+</li>
-          <li>AWS Certified Security Specialty</li>
-          <li>CCNA (Basic Networking Knowledge)</li>
-        </ul>
+      <h2 class="section-title">
+        Career Development Plan 🚀
+      </h2>
 
-        <h4 class="mt-4">Tools to Learn & Use</h4>
+      <div class="resume-box">
 
-        <ul>
-          <li>Wireshark</li>
-          <li>Linux</li>
-          <li>Python</li>
-          <li>Burp Suite</li>
-          <li>OWASP ZAP</li>
-          <li>Docker</li>
-        </ul>
+        <div class="timeline">
 
-        <h4 class="mt-4">Career Timeline</h4>
+          <div class="timeline-item">
 
-        <table class="table table-bordered timeline-table mt-3">
-          <thead>
-            <tr>
-              <th>Timeline</th>
-              <th>Goals</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>2 Years (Short-Term)</td>
-              <td>
-                Work as a Junior Software Developer while improving cybersecurity skills and obtaining CompTIA Security+ certification.
-              </td>
-            </tr>
-
-            <tr>
-              <td>5 Years (Long-Term)</td>
-              <td>
-                Become a Senior Security-Focused Software Engineer with strong experience in secure application development and cloud security.
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-      </div>
-    </section>
-
-    <!-- EVIDENCE -->
-    <section id="evidence" class="mb-5">
-      <h2 class="section-title">D. Evidence of Learning</h2>
-
-      <div class="row">
-
-        <div class="col-md-4">
-          <div class="card evidence-box">
-            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop" alt="Project">
-
-            <h5>eTani Mobile App</h5>
+            <h5>📌 Short-Term Goal (2 Years)</h5>
 
             <p>
-              A mobile agriculture application developed using Flutter and Firebase Authentication.
+              Become a Junior Software Developer and obtain CompTIA Security+ certification.
             </p>
-
-            <p><strong>Skills Used:</strong> Flutter, Firebase, UI Design</p>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card evidence-box">
-            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1200&auto=format&fit=crop" alt="System">
-
-            <h5>Water Quality Monitoring System</h5>
 
             <p>
-              A Laravel-based monitoring system for water quality management.
+              Learn tools such as Linux, Wireshark, Burp Suite, and Python.
             </p>
 
-            <p><strong>Skills Used:</strong> Laravel, MySQL, Dashboard Design</p>
           </div>
-        </div>
 
-        <div class="col-md-4">
-          <div class="card evidence-box">
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" alt="Workshop">
+          <div class="timeline-item">
 
-            <h5>Workshops & Online Courses</h5>
+            <h5>🌟 Long-Term Goal (5 Years)</h5>
 
             <p>
-              Participated in cybersecurity webinars and online learning related to secure coding and networking basics.
+              Become a Senior Security-Focused Software Engineer with strong cloud security and secure coding skills.
             </p>
 
-            <p><strong>Platform:</strong> Cisco Skills For All & YouTube Learning</p>
+            <p>
+              Obtain AWS Security Certification and gain real industry experience.
+            </p>
+
           </div>
+
         </div>
 
       </div>
-    </section>
 
-    <!-- REFLECTION -->
-    <section id="reflection" class="mb-5">
-      <h2 class="section-title">E. Personal Reflection</h2>
+    </div>
+  </section>
 
-      <div class="card">
+  <!-- EVIDENCE -->
+  <section id="evidence">
 
-        <h4>Dream Company: 
+    <div class="container">
+
+      <h2 class="section-title">
+        Evidence of Learning 📚
+      </h2>
+
+      <div class="row g-4">
+
+        <div class="col-lg-4">
+
+          <div class="card-box">
+
+            <!-- CHANGE IMAGE -->
+            <img src="project1.jpg" class="evidence-img">
+
+            <h4>eTani App</h4>
+
+            <p>
+              Mobile agriculture application developed using Flutter and Firebase Authentication.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-4">
+
+          <div class="card-box">
+
+            <!-- CHANGE IMAGE -->
+            <img src="project2.jpg" class="evidence-img">
+
+            <h4>Water Quality System</h4>
+
+            <p>
+              Laravel-based monitoring system for water quality management.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-4">
+
+          <div class="card-box">
+
+            <!-- CHANGE IMAGE -->
+            <img src="certificate.jpg" class="evidence-img">
+
+            <h4>Courses & Workshops</h4>
+
+            <p>
+              Participated in online courses and cybersecurity workshops to improve technical knowledge.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- REFLECTION -->
+  <section id="reflection">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Personal Reflection 💭
+      </h2>
+
+      <div class="card-box">
+
+        <h3>
+          Dream Company:
           :contentReference[oaicite:0]{index=0}
-        </h4>
+        </h3>
 
-        <h5 class="mt-4">Why do you want to work for this company?</h5>
+        <div class="mt-4">
 
-        <p>
-          I want to work for CyberSecurity Malaysia because the company plays an important role in protecting Malaysia’s digital infrastructure and cybersecurity ecosystem. 
-          I admire the organization’s mission to strengthen national cybersecurity awareness and defense.
-        </p>
+          <h5>Why do you want to work for this company?</h5>
 
-        <h5 class="mt-4">What value can you bring to this company?</h5>
+          <p>
+            I want to work for CyberSecurity Malaysia because the company helps protect Malaysia’s cybersecurity ecosystem and digital infrastructure.
+          </p>
 
-        <p>
-          I can contribute by developing secure and user-friendly applications while applying secure coding practices. 
-          I am also willing to continuously learn new technologies and adapt quickly to industry changes.
-        </p>
+          <h5 class="mt-4">What value can you bring?</h5>
 
-        <h5 class="mt-4">Why should we hire you?</h5>
+          <p>
+            I can contribute by developing secure and user-friendly applications while continuously improving my cybersecurity knowledge.
+          </p>
 
-        <p>
-          I am hardworking, motivated, and eager to improve my cybersecurity knowledge. 
-          Besides technical abilities, I can work well in teams and communicate effectively during projects.
-        </p>
+          <h5 class="mt-4">Why should we hire you?</h5>
 
-        <h5 class="mt-4">What skills make you suitable for this job?</h5>
+          <p>
+            I am hardworking, creative, and passionate about software development and cybersecurity.
+          </p>
 
-        <ul>
-          <li>Web and mobile application development</li>
-          <li>Database and authentication systems</li>
-          <li>Problem-solving mindset</li>
-          <li>Fast adaptability to new technologies</li>
-        </ul>
+          <h5 class="mt-4">Strengths & Weaknesses</h5>
 
-        <h5 class="mt-4">What are your strengths and weaknesses?</h5>
+          <p>
+            <strong>Strengths:</strong> Fast learner, teamwork, adaptability.
+          </p>
 
-        <p>
-          <strong>Strengths:</strong> Fast learner, creative thinker, and able to adapt quickly to new frameworks and tools.
-        </p>
+          <p>
+            <strong>Weaknesses:</strong> Still improving advanced penetration testing and cloud security skills.
+          </p>
 
-        <p>
-          <strong>Weaknesses:</strong> I am still improving my knowledge in advanced penetration testing and network forensics.
-        </p>
-
-        <h5 class="mt-4">Why would a company choose to hire you?</h5>
-
-        <p>
-          A company would choose to hire me because I am passionate about both software development and cybersecurity. 
-          I am committed to improving my skills and contributing positively to the organization.
-        </p>
+        </div>
 
       </div>
-    </section>
 
-  </div>
+    </div>
+  </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 Nana | UniSZA Student 💜</p>
+
+    <p>
+      Nur Imanina | UniSZA Student
+    </p>
+
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
